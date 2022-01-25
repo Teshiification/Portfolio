@@ -10,6 +10,6 @@
 
 <!-- Portfolio -->
 
-## 🙋 Personal Portfolio
+## 🙋‍♂️ Personal Portfolio
 
-**[My Portfolio](https://danny-sinicco.de)**
+<a href="https://danny-sinicco.de" target="Portfolio Danny Sinicco">Portfolio</a>
