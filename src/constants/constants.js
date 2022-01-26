@@ -31,7 +31,7 @@ export const projects = [
     description: "Das neue Portfolio seit 2022",
       image: '/images/3.jpg',
       tags: ['React', 'Node.js', '2022'],
-    more: '#',
+    more: 'https://www.danny-sinicco.de',
     code: 'https://github.com/Teshiification/Portfolio',
     id: 3,
   },
