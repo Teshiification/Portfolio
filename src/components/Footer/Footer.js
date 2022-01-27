@@ -21,7 +21,7 @@ const Footer = () => {
     <CompanyContainer>
       <Slogan>Danny-Gino Sinicco</Slogan>
     </CompanyContainer>
-    <SocialIcons href="https://github.com">
+    <SocialIcons href="https://github.com/Teshiification">
       <AiFillGithub size="3rem"/>
     </SocialIcons>
     <SocialIcons href="https://linkedin.com">

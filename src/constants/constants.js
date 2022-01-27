@@ -22,8 +22,8 @@ export const projects = [
     description: "Alte Version aus 2020-2021",
     image: './images/2.jpg',
     tags: ['HTML', 'CSS', 'JavaScript' , '2020', '2021'],
-    more: '/Projects/Portfolio_2020-2021/index.html',
-    code: '/Projects/Portfolio_2020-2021/index.html',
+    more: '/Projects/Portfolio_2020-2021/index.php',
+    code: '#',
     id: 2,
   },
   {
