@@ -1,16 +1,16 @@
-export const socialmedia = () =>  (
-    <SocialIconsContainer>
-      <CompanyContainer>
-        <Slogan>Danny-Gino Sinicco</Slogan>
-      </CompanyContainer>
-      <SocialIcons href="https://github.com/Teshiification">
-        <AiFillGithub size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://linkedin.com">
-        <AiFillLinkedin size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://www.instagram.com/danny_sinicco">
-        <AiFillInstagram size="3rem"/>
-      </SocialIcons>
-    </SocialIconsContainer>
-);
+import {AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+
+export const SocialMediaData = [
+  {
+    url: "https://github.com/Teshiification",
+    icon: <AiFillGithub size="2rem"/>,
+  },
+  {
+    url: "https://www.instagram.com/danny_sinicco",
+    icon: <AiFillInstagram size="2rem"/>,
+  },
+  {
+    url: "https://linkedin.com",
+    icon: <AiFillLinkedin size="2rem"/>,
+  },
+];
