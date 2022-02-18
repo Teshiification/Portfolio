@@ -1,42 +1,40 @@
 import React from 'react';
 
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { projects } from '../../constants/constants';
-
+import {H1, Section, Button, BlogCard} from '../../themes/global';
+import {ProjectsData} from '../../constants/projects';
+import {CardInfo, GridContainer, HrSmall, HrBig, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import FadeInSection from '../../animations/FadeInSection';
 
 const Projects = () => (
-  <Section nopadding id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projekte</SectionTitle>
-    <GridContainer>
-      {projects.map(({id, image, title, description, tags, more, code})=>(
+  <Section id="projects">
+  <H1>Projekte</H1>
+    <GridContainer id="container">      
+      {ProjectsData.reverse().map(({id, image, title, description, tags, more, code})=>(
+        <FadeInSection>
         <BlogCard key={id}>
           <Img src={image} />
-          <TitleContent title>
+          <TitleContent>
             {title}
-          <Hr />
+          <HrSmall />
           </TitleContent>
           <CardInfo>
             {description}
           </CardInfo>
-          <div>
-            <br/>
-            <TitleContent>Kategorie</TitleContent>
+            <TitleContent>Tags</TitleContent>
             <TagList>
-              {tags.map((tag,i)=>(
+              {tags.map((tag, i)=>(
                 <Tag key={i}>{tag}</Tag>
               ))}
             </TagList>
-          </div>
           <UtilityList>
-            <ExternalLinks href={code}>Code</ExternalLinks>
-            <ExternalLinks href={more}>More</ExternalLinks>
+            <Button href={code}>Code</Button>
+            <Button href={more}>More</Button>
           </UtilityList>
         </BlogCard>
+        </FadeInSection>
       ))}
     </GridContainer>
-  </Section>
+    </Section>
 );
 
 export default Projects;
