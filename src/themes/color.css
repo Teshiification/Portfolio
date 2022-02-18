@@ -1,0 +1,17 @@
+:root{
+    /* EDITABLE */
+    --corporate-color: #25c2d6;
+    --corporate-color-highlight: #2de7ff;
+    
+    --color-bg: #1f2933;
+    --color-bg-highlight: #3a4c5f;
+    --color-bg-darkened: #1b222b;
+
+    /* NO TOUCHY! */
+    --color-text: var(--corporate-color);
+    --color-text-highlight: var(--corporate-color-highlight);
+
+    --color-button-background: var(--color-text);
+    --color-button-background-highlight: var(--color-bg-highlight);
+    --color-gradient: -moz-linear-gradient(top, var(--color-text-highlight) 0%, var(--color-text) 100%);
+}
