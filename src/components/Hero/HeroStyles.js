@@ -1,23 +1,42 @@
 import styled from 'styled-components';
 
-export const LeftSection = styled.div`
-  width: 100%;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+export const HeroText = styled.p`
+    z-index: 999;
+    position: absolute;  
+    margin-left: 25vw;
+    max-width: 50vw;  
 
-    margin: 0 auto;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
+    @media only screen and (max-width: 900px){
+        padding-top: 10vh;
+    }
+    
+    @media only screen and (min-width: 900px){
+        margin-top: 20vh;
+
+    }
+`
+
+export const HeroImg = styled.div`
+    z-index: -999;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    opacity: .1;
+    margin-top: -15vh; 
+    @media only screen and (max-width: 900px){
+        // background-image: url(/images/portrait.png);
+        // background-repeat: no-repeat;
+        // background-size: 100%;
+        padding-top: 25rem;
+    }
 
-    margin: 0 auto;
-  }
-`;
+    @media only screen and (min-width: 900px){
+        background-image: url(/images/portrait.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        padding-top: 70rem;
+    }
 
-  Section: {
-    backgroundImage: `url("./images/0.jpg")`;
-  }
+    // mask-image: -moz-linear-gradient(top, rgba(255,255,255, .25), rgba(255,255,255, 1), rgba(255,255,255, .25));
+    // -webkit-mask-image: -webkit-linear-gradient(top, rgba(255,255,255, .0), rgba(255,255,255, .5), rgba(255,255,255, 1), rgba(255,255,255, .5), rgba(255,255,255, .0));
+    
+`
