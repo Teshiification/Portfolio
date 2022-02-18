@@ -1,48 +1,43 @@
-import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { DiCssdeck, DiReact } from 'react-icons/di';
 
-import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
+import './HeaderStyles';
+import {H5,A5} from '../../themes/global';
+import {DivLeft,DivCenter,DivRight, Container, SocialIcons,NavList} from './HeaderStyles';
+import {SocialMediaData} from '../../constants/socialmedia';
+import {InfoData} from '../../constants/info'; 
+import {AiFillFire} from 'react-icons/ai';
 
-const Header = () =>  (
-  <Container>
-    <Div1>
-      <Link href="/">
-        <a style={{display: "flex", alignItems: "center", color: "white", marginBottom: '20px'}}>
-          <DiReact size ="3rem"/> <Span>Danny Sinicco</Span>
-        </a>
-      </Link>
-    </Div1>
-    <Div2>
-      <li>
-        <Link href="#projects">
-          <NavLink>Projekte</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#tech">
-          <NavLink>Technologien</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#about">
-          <NavLink>Über mich</NavLink>
-        </Link>
-      </li>
-    </Div2>
-    <Div3>
-      <SocialIcons href="https://github.com/Teshiification">
-        <AiFillGithub size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://linkedin.com">
-        <AiFillLinkedin size="3rem"/>
-      </SocialIcons>
-      <SocialIcons href="https://www.instagram.com/dannysini">
-        <AiFillInstagram size="3rem"/>
-      </SocialIcons>
-    </Div3>
-    </Container>
-);
+const Header = () => {
+    return (
+        <>
+        <Container>
+            <DivLeft>
+                <SocialIcons href="./">
+                    <AiFillFire size="2rem" />
+                    </SocialIcons>
+                {InfoData.map(({forname, surname})=>(
+                    <H5>{forname} {surname}</H5>                
+                ))}
+            </DivLeft>
+            <DivCenter>
+                <NavList>
+                    <A5 href="#projects">Projekte</A5>
+                    <A5 href="#technologies">Skils</A5>
+                    <A5 href="#timeline">Timeline</A5>
+                    <A5 href="#acomplishments">Acomplishments</A5>
+                    <A5 href="#contact">Kontakt</A5>
+                </NavList>
+            </DivCenter>
+            <DivRight>
+                {SocialMediaData.map(({url, icon})=>(
+                    <SocialIcons href={url}>
+                        {icon}
+                    </SocialIcons>
+                ))}
+            </DivRight>
+        </Container>
+        </>
+    )
+}
 
 export default Header;
