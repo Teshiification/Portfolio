@@ -1,21 +1,23 @@
 import React from 'react';
 
-import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import './HeroStyles';
+import {H1, H2, Section} from '../../themes/global';
+import {HeroImg, HeroText} from './HeroStyles';
+import {InfoData} from '../../constants/info'; 
 
-const Hero = () => (
-  <Section row nopadding>
-    <LeftSection>
-      <SectionTitle main center>
-      Willkommen <br/>auf meinem Portfolio!
-      </SectionTitle>
-      <SectionText>
-      "Das Portfolio ist eine zielgerichtete Sammlung von Arbeiten, welche die Anstrengungen des Lernenden, den Lernfortschritt und die Leistungsresultate auf einem oder mehreren Gebieten zeigt."
-      </SectionText>
-      <Button onClick={()=> window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>Ein Button</Button>
-    </LeftSection>
-  </Section>
-);
+const Hero = () => {
+    return (
+        <>
+    <HeroText style={{zindex:"-99"}}>
+        {InfoData.map(({title, phrase})=>(
+            <>
+                <H1>{title}</H1>  
+                <H2>{phrase}</H2> 
+            </>
+        ))}   
+        </HeroText>  
+    <HeroImg style={{zindex:"-999"}}/>
+    </>
+    )
+}
 
 export default Hero;
