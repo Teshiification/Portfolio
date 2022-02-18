@@ -1,23 +1,23 @@
 import React from 'react';
 
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
-import { AcomplishmentsData } from '../../constants/constants';
+import {Section} from '../../themes/global';
+import {Container, Item, Number, Text, Icon} from './AcomplishmentsStyles';
+import {AcomplishmentsData} from '../../constants/acomplishments';
 
-const Acomplishments = () => (
-  <Section>
-    <SectionTitle>
-    Persönliche Leistung
-    </SectionTitle>
-    <Boxes>
-      {AcomplishmentsData.map((card, index) =>(
-        <Box key={index}>
-          <BoxNum>{card.number}+</BoxNum>
-          <BoxText>{card.text}</BoxText>
-        </Box>
-      ))}
-    </Boxes>
-  </Section>
-);
+const Acomplishments = () => {
+    return (
+    <Section id="acomplishments">
+        <Container>
+            {AcomplishmentsData.map((card, i)=>(
+                <Item id={i}>
+                    <Icon>{card.icon}</Icon>
+                    <Number>{card.number}+</Number>
+                    <Text>{card.text}</Text>                    
+                </Item>
+            ))}
+        </Container>
+    </Section>
+
+    )};
 
 export default Acomplishments;
