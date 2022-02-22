@@ -2,7 +2,7 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
-    background-color: var(--color-bg);
+    background-color: #1f2933;
 }
 
 body{    
@@ -22,7 +22,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-bg);
     z-index: 99;
 }
 
