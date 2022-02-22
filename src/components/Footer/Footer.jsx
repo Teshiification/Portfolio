@@ -1,27 +1,37 @@
 import React from 'react';
 
-import {Container, ContainerItem, P, A, SocialIcons} from './FooterStyles';
+import {Container, ContainerItemLeft, ContainerItemCenter, ContainerItemRight, P, A, SocialIcons} from './FooterStyles';
 import {SocialMediaData} from '../../constants/socialmedia';
 const Footer = () => {
     return (
         <>
             <Container>
-                <ContainerItem>
-                    <P>Portfolio</P>
-                    <P>©Danny Sinicco</P>                     
-                </ContainerItem>
-                <ContainerItem>
+                <ContainerItemLeft>
+                    <P>Portfolio 2022</P>
+                    <P>©Danny Sinicco</P> 
+                </ContainerItemLeft>
+
+                <ContainerItemLeft>
+                    {/*  */}
+                </ContainerItemLeft>
+
+                <ContainerItemCenter>
                     <P>- Links -</P>
                     <A href="#">Impressum</A><br/>
                     <A href="#">Datenschutz</A>
-                </ContainerItem>
-                <ContainerItem>
-                {SocialMediaData.map((data)=>(
-                        <SocialIcons href={data.url}>
-                            {data.icon}
-                        </SocialIcons>
-                    ))}
-                </ContainerItem>    
+                </ContainerItemCenter>
+
+                <ContainerItemRight>
+                    {/*  */}
+                </ContainerItemRight>
+                
+                <ContainerItemRight>
+                    {SocialMediaData.map((data)=>(
+                            <SocialIcons href={data.url}>
+                                {data.icon}
+                            </SocialIcons>
+                        ))}
+                </ContainerItemRight>    
             </Container>
         </>
     )
