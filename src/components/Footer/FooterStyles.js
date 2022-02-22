@@ -2,17 +2,30 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 1rem;
-    margin: 2rem;
+    grid-column-gap: 1vw;
+    margin: 1vw;
     background: var(--color-bg-darkened);
-    height: 20vh;
-    border-radius: 2rem;
+    height: auto;
+    border-radius: 1rem;
+`
+export const ContainerItemLeft = styled.div`
+    margin-left: 1vw; 
+    margin-right: auto;
+    margin-top: 1vh;
 `
 
-export const ContainerItem = styled.div`
-    margin: 1rem;
+export const ContainerItemCenter = styled.div`
+    margin: 1vw;
+    margin-top: 1vh;
+    text-align: center;
+`
+
+export const ContainerItemRight = styled.div`
+    margin-left: auto; 
+    margin-right: 1vw;
+    margin-top: 1vh;
 `
 
 export const P = styled.p`
