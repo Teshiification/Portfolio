@@ -1,8 +1,8 @@
 :root{
     scroll-behavior: smooth;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', serif;
     background-color: #1f2933;
+    font-family: 'Lobster', cursive;
 }
 
 body{    
