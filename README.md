@@ -1,4 +1,5 @@
 <h1> THIS IS MY PERSONAL PORTFOLIO </h1>
+<h2> Use this as a template</h2>
 
 <!-- Language Badges -->
 <p align="center">
@@ -11,5 +12,5 @@
 <!-- Portfolio -->
 
 ## 🙋‍♂️ Personal Portfolio
-
-<a href="https://danny-sinicco.de" target="Portfolio Danny Sinicco">Portfolio</a>
+<p>Version 2022</p>
+<a href="https://danny-sinicco.de" target="Portfolio Danny Sinicco">Link to portfolio</a>
